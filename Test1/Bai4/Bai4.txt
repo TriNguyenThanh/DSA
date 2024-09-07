@@ -1,0 +1,7 @@
+1. Kiểm tra 1 ký tự có phải chữ cái hay không
+ - Nếu không thì trả về 0.
+ - Nếu có thì đưa về dạng in hoa rồi trả về giá trị tương ứng
+2. Tạo mảng chứ 26 trạng thái của 26 ký tự.
+3. Kiểm tra ký tự đã xuất hiện hay chưa:
+ - Nếu ký tự đó chưa từng xuất hiện thì đưa giá trị tương ứng thành 1.
+4. Đếm xem còn bao nhiêu giá trị 0 thì còn bấy nhiêu ký tự còn thiếu. 
