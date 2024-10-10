@@ -14,7 +14,7 @@ struct Node
     Node *pNext;
 };
 
-struct LkList
+struct List
 {
     Node* pHead;
     Node* pTail;
@@ -30,10 +30,10 @@ Node* getNode(int x){
     return ptr;
 }
 
-void init(LkList &l){
+void init(List &l){
     l.pHead = l.pTail = nullptr;
 }
-void addHead(LkList &l, int x){
+void addHead(List &l, int x){
     Node *p = getNode(x);
     if (p == nullptr) return;
     if (l.pHead == nullptr){
@@ -43,7 +43,7 @@ void addHead(LkList &l, int x){
         l.pHead = p;
     }
 }
-void removeHead(LkList &l){
+void removeHead(List &l){
     Node *p = l.pHead;
     if (l.pHead == nullptr) return;
     if (l.pHead == l.pTail){
@@ -57,7 +57,7 @@ void removeHead(LkList &l){
         p = nullptr;
     }
 }
-void addTail(LkList &l, int x){
+void addTail(List &l, int x){
     Node *p = getNode(x);
     if (p == nullptr) return;
     if (l.pHead == nullptr){
@@ -67,7 +67,7 @@ void addTail(LkList &l, int x){
         l.pTail = p;
     }
 }
-void removeTail(LkList &l){
+void removeTail(List &l){
     Node *p = l.pHead;
     if (l.pHead == nullptr) return;
     if (l.pHead == l.pTail){
@@ -83,7 +83,7 @@ void removeTail(LkList &l){
         l.pTail = p;
     }
 }
-void input(LkList &l){
+void input(List &l){
     int n; cin >> n;
     char a, b; int x;
     for (int i = 0; i<n; ++i){
@@ -97,7 +97,7 @@ void input(LkList &l){
         }
     }
 }
-void output(LkList l){
+void output(List l){
     Node *p = l.pHead;
     while(p != nullptr){
         cout << p->info << ' ';
@@ -106,7 +106,7 @@ void output(LkList l){
 }
 
 int main(){
-    LkList l;
+    List l;
     init(l);
     input(l);
     output(l);
